@@ -1,0 +1,60 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    place-items: center center;
+}
+
+table{
+    border: 1px solid black;
+    font-size: 1.5em;
+    border-collapse: collapse;
+}
+
+table >thead {
+    background-color: black;
+    color: white;
+    border-bottom: 3px dashed black;
+}
+
+table > tbody >tr:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+table > tbody >tr>td{
+    border: 1px solid black;
+}
+
+#todoDetailArea{
+    width: 500;
+    height: 200px;
+    border: 3px solid blacrek;
+    padding: 50px;
+    background-color: white;
+}
+
+#modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#modal.active{
+    display: flex;
+}
+
+.edit{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 200px;
+}

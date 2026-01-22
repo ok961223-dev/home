@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의뢰 시스템</title>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>의뢰 시스템</h1>
+
+    <hr>
+    <h2>의뢰등록</h2>
+    <div>의뢰자 이름</div>
+    <input type="text" name="name" placeholder="이름">
+    <div>의뢰지 주소</div>
+    <input type="text" name="add" placeholder="주소">
+    <div>의뢰 내용</div>
+    <textarea name="content" placeholder="의뢰내용"></textarea>
+    <button onclick="insertMission()">의뢰하기</button>
+
+    <h2>의뢰내역확인</h2>
+    <button onclick="displayVoList();">조회</button>
+    <table id="voListTable">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>의뢰내용</th>
+                <th>의뢰시간</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    </table>
+
+    <hr>
+    <div id="modal" onclick="closeModal();">
+        <div id="todoDetailArea" onclick="f01(event)">
+            <label>번호 : </label><span id="missionDetailNo"> ??? </span>
+            <br>
+            <label>의뢰자 : </label><span id="missionDetailName"> ??? </span>
+            <br>
+            <label>의뢰지역 : </label><span id="missionDetailAdd"> ??? </span>
+            <br>
+            <label>의뢰 : </label><span id="missionDetailContent"> ??? </span>
+            <br>
+            <label>생성일지 : </label><span id="missionDetailCreatedAt"> ??? </span>
+            <h2 onclick="location.href='./index_edit.html'" class="edit">의뢰수정</h2>
+            <h2 onclick="deleteMission();" class="edit">의뢰삭제</h2>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
